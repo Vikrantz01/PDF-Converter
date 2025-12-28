@@ -59,3 +59,28 @@ Easy as that! 😎✨
 
 ```bash
 git clone https://github.com/your-username/pdf-converter.git
+
+features
+
+🚧 Future Enhancements
+
+🚀 Drag & Drop Support
+📦 Multiple File Upload
+👀 File Preview
+☁️ Backend Support for Large Files
+
+🤝 Contribute
+
+💡 Have ideas or improvements?
+Fork the repo 🍴 & create a pull request 🔥
+
+📜 License
+
+📄 Licensed under MIT License
+Free to use & modify ✨
+
+👨‍💻 Author
+
+💙 Vikrant (Vikku)
+🌐 Web Developer
+
