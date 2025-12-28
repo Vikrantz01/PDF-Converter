@@ -1,5 +1,3 @@
-# JPG to PDF Converter (Client-side)
-
 # 📄✨ PDF Converter Web App  
 
 🚀 A modern, fast & easy-to-use **PDF Converter Web Application** built with  
