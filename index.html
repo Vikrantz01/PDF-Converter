@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>JPG to PDF Converter</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.19/mammoth.browser.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.0/jszip.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/docx@7.3.1/build/index.browser.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <div class="card">
+        <header class="card-header">
+          <h1>File Converter</h1>
+          <p class="sub">JPG, PDF, and Word conversions — 100% client-side</p>
+        </header>
+
+        <section class="uploader">
+          <div id="dropZone" class="drop-zone" tabindex="0">
+            <div class="drop-content">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <img src="images/upload-icon.png" alt="">
+              </svg>
+              <p>Drag & drop JPG images here or</p>
+              <label class="btn-upload" for="fileInput">Browse Files</label>
+              <input id="fileInput" type="file" accept="image/jpeg,image/jpg" multiple hidden />
+            </div>
+          </div>
+          <div class="options">
+            <div class="option-row">
+              <label>Page size</label>
+              <select id="pageSize">
+                <option value="a4">A4 (210×297mm)</option>
+                <option value="letter">Letter (8.5×11in)</option>
+              </select>
+            </div>
+            <div class="option-row">
+              <label>Mode</label>
+              <select id="modeSelect">
+                <option value="jpg2pdf">JPG → PDF</option>
+                <option value="pdf2jpg">PDF → JPG</option>
+                <option value="word2pdf">Word → PDF</option>        
+                <option value="word2jpg">Word → JPG</option>
+              </select>
+            </div>
+            <div class="option-row">
+              <label>Orientation</label>
+              <select id="orientation">
+                <option value="portrait">Portrait</option>
+                <option value="landscape">Landscape</option>
+              </select>
+            </div>
+            <div class="option-row">
+              <label>Image quality</label>
+              <input id="quality" type="range" min="0.1" max="1" step="0.1" value="0.9" />
+            </div>
+          </div>
+        </section>
+
+        <section class="preview" aria-label="Image previews">
+          <h2>Preview</h2>
+          <div id="previewList" class="preview-list" aria-live="polite"></div>
+        </section>
+
+        <section class="actions">
+          <button id="convertBtn" class="btn primary" disabled>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 9H5v10h14V9zm0-2H5a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2zM8 4h8v2H8z"/></svg>
+            <span class="btn-text">Convert to PDF</span>
+          </button>
+          <button id="clearBtn" class="btn" disabled>
+            Clear
+          </button>
+          <div id="progress" class="progress hidden">
+            <div class="spinner"></div>
+            <div id="progressText">Ready</div>
+          </div>
+        </section>
+      </div>
+      <footer class="attribution">
+        <p>|| Build By Vikrant ||</p>
+      </footer>
+    </main>
+  </body>
+</html>
