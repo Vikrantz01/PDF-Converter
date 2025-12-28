@@ -81,6 +81,6 @@ Free to use & modify ✨
 
 👨‍💻 Author
 
-💙 Vikrant (Vikku)
+💙 Vikrant
 🌐 Web Developer
 
